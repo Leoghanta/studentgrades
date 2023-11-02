@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="studentgrades.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:studentgrades"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Column 0 -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Student Name:" 
+                   Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Student Mark:" 
+                   Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        
+        <Button Grid.Row="2" Grid.Column="0" 
+                Content="Add" Click="Add_Click" HorizontalAlignment="left" Margin="10"/>
+
+        <!-- Column 1 -->
+        <TextBox Grid.Row="0" Grid.Column="1" 
+                 x:Name="studentNameTextBox" Width="200" Margin="10" HorizontalAlignment="Left"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" 
+                 x:Name="marksTextBox" Width="200" Margin="10" HorizontalAlignment="Left"/>
+
+        <!-- Column 2 -->
+        <!-- TODO: Data Binding -->
+            <ListView Grid.Column="2" Grid.RowSpan="4" Grid.Row="0"  
+                      x:Name="studentlist" Margin="10">
+              
+                
+            </ListView>
+        
+
+    </Grid>
+</Page>
